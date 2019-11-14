@@ -1,0 +1,14 @@
+<h1>Tardis#index</h1>
+<p>Find me in app/views/tardis/index.html.erb</p>
+
+<%= form_for @message, remote: true do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit %>
+<% end %>
+
+<hr>
+
+<div>
+  <ul id="message_list">
+  </ul>
+</div>
