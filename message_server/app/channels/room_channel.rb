@@ -9,12 +9,15 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   # Client (RPC) methods
-  def broadcast(params)
-    sender = params.fetch('sender')
-    message = params.fetch('message')
+  def broadcast(data)
+    message = { sender: data['sender'], content: data['content'] }
 
-    if Message.new(content: message).save
-      ActionCable.server.broadcast 'room_channel', content: "#{sender}: #{message}"
-    end
+    # Reject messages without content
+    return if message[:content].empty?
+
+    # Due to GDPR concerns we do not persist the messages :/
+    # Message.create! message
+
+    ActionCable.server.broadcast 'room_channel', message
   end
 end
