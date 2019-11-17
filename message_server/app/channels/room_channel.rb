@@ -10,7 +10,7 @@ class RoomChannel < ApplicationCable::Channel
 
   # Client (RPC) methods
   def broadcast(data)
-    message = { sender: data['sender'], content: data['content'] }
+    message = { sender: data['sender'], content: data['content'], color: data['color'] || '#01AD9B' }
 
     # Reject messages without content
     return if message[:content].empty?

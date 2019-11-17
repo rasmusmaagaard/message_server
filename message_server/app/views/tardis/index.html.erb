@@ -1,10 +1,19 @@
-<h1>Chat Room</h1>
-
-<form>
-  <input type="text" placeholder="New message..." id="message_content">
-  <button type="button" id="send_message">Send</button>
-</form>
-
-<hr>
+<h1 class="text-center">Chat Room</h1>
 
 <div id="messages"></div>
+<br>
+
+<div>
+  <input type="text" placeholder="New message..." id="message_content">
+  <button type="button" id="send_message">Send</button>
+</div>
+
+<!-- Handlebar template for messages received over action cable -->
+<script id="message-template" type="text/x-handlebars-template">
+  <div class="speechbubble" style="border-color: {{color}}">
+    <p>
+      {{content}}
+      <span class="sender">{{sender}}</span>
+    </p>
+  </div>
+</script>
