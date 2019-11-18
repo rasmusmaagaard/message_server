@@ -17,6 +17,8 @@ $input-text-color: #a3a3a3;
 $button-bg-color: rgb(138, 180, 248);
 $button-text-color: rgba(238,238,238,1);
 
+// The "send message" view
+
 #message_content {
   width: 360px;
   background: #fff;
@@ -54,6 +56,10 @@ $button-text-color: rgba(238,238,238,1);
   }
 }
 
+// The message view
+
+// The styling og og bubbles are done with CSS.
+// We use child selectors to make the bubbles change between left an right.
 .speechbubble {
   background-color: $bubble;
   color: $text;
