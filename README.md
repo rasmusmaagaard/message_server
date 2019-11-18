@@ -54,7 +54,7 @@ The CSS styling is heavily inspired from these codepens:
 * [Form](https://codepen.io/visualcookie/pen/kkwxPm)
 
 ### Final notes
-Also checkout the Swift client: <https://swiftclient>
+Also checkout the Swift client: <https://github.com/rasmusmaagaard/MessageChannel>
 
 As this is a study project with time constraints there is currently no tests :scream::rage::cry:
 
